@@ -1,0 +1,17 @@
+.productsblock {
+  width: 95%;
+  margin-bottom: 50px;
+}
+
+.productsblock h2 {
+  text-align: center;
+  font-size: 39px;
+  margin-bottom: 30px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}

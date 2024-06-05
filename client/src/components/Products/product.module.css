@@ -1,0 +1,54 @@
+.product {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 10px;
+}
+
+.product:hover .cartlink {
+  opacity: 1;
+}
+
+.cartlink {
+  position: absolute;
+  width: 60%;
+  text-align: center;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  padding: 10px;
+  background-color: #d68048;
+  border-radius: 5px;
+  color: white;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.cartlink:hover {
+  background-color: rgb(54, 54, 54);
+}
+
+.title {
+  text-align: center;
+  opacity: 0.6;
+  margin-bottom: 5px;
+}
+
+.price {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.wish {
+  position: relative;
+  z-index: 1000;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.wish:hover {
+  color: #d68048;
+}

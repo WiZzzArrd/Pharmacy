@@ -1,0 +1,27 @@
+.cart {
+  width: 100%;
+  min-height: 300px;
+}
+
+.empty {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  width: 100%;
+  background-color: #d68048;
+  height: 60px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.btn {
+  cursor: pointer;
+  width: 15%;
+  height: 50px;
+  color: white;
+
+  background-color: #d68048;
+  border: none;
+  outline: none;
+}

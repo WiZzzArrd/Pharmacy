@@ -1,0 +1,71 @@
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 100px;
+
+  padding-top: 10px;
+}
+
+.footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s;
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+.footer a:hover {
+  color: #d68048;
+}
+
+.description {
+  width: 25%;
+}
+
+.description p {
+  opacity: 0.7;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.description img {
+  text-align: center;
+}
+
+.social {
+  display: flex;
+  gap: 30px;
+}
+
+.navigation {
+  width: 25%;
+}
+
+.information {
+  width: 25%;
+}
+
+.company {
+  width: 25%;
+}
+
+.footer h2 {
+  margin-bottom: 10px;
+}
+
+.information h2,
+.navigation h2,
+.company h2 {
+  font-weight: normal;
+  font-size: 20px;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}

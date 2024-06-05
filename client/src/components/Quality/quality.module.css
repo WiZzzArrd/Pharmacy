@@ -1,0 +1,29 @@
+.quality {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.quality img {
+  width: 40px;
+  height: 40px;
+}
+
+.item {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.item p:first-child {
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+.item p:nth-child(2) {
+  font-size: 12px;
+  opacity: 0.7;
+}

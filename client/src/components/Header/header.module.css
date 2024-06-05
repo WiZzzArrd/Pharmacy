@@ -1,0 +1,41 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.logo img {
+  width: 120px;
+  height: 120px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav ul a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s;
+}
+
+.nav ul a:hover {
+  color: #d68048;
+}
+
+.tools {
+  display: flex;
+  gap: 20px;
+}
+
+.tools img {
+  width: 20px;
+  height: 20px;
+}

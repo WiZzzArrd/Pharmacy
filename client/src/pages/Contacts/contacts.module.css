@@ -1,0 +1,140 @@
+.contacts {
+  width: 100%;
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+}
+
+.contacts h2 {
+  text-align: center;
+  margin-bottom: 70px;
+  margin-top: 50px;
+  font-weight: normal;
+  font-size: 32px;
+}
+
+.contacts iframe {
+  width: 100%;
+  margin-bottom: 70px;
+  height: 500px;
+}
+
+.announcement {
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  opacity: 0.7;
+  margin-bottom: 70px;
+}
+
+.infoblock {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.item {
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.item h3 {
+  margin-bottom: 6px;
+  opacity: 0.7;
+  font-weight: normal;
+}
+
+.item img {
+  width: 40px;
+  height: 40px;
+}
+
+.item p {
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+.form {
+  width: 60%;
+}
+
+.userinfo {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.userinfoitem {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.userinfoitem label {
+  opacity: 0.7;
+  margin-bottom: 5px;
+}
+
+.userinfoitem input {
+  opacity: 0.7;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.userinfoitem input:focus {
+  outline: 1px solid rgba(0, 0, 0, 0.6);
+  border: none;
+}
+
+.message {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.message label {
+  opacity: 0.7;
+  margin-bottom: 5px;
+}
+
+.message textarea {
+  resize: none;
+  padding: 20px;
+  opacity: 0.7;
+}
+
+.message textarea {
+  opacity: 0.7;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.message textarea:focus {
+  outline: 1px solid rgba(0, 0, 0, 0.6);
+  border: none;
+}
+
+.btn {
+  width: 25%;
+  padding: 0 20px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #d68048;
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: 1px solid rgba(0, 0, 0, 0.6);
+}
