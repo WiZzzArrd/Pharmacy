@@ -29,14 +29,17 @@ const Category = sequelize.define("category", {
     name: {type:DataTypes.STRING, unique: true, allowNull: false}
 })
 
-const Tag = sequelize.define("tag", {
-    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    name: {type: DataTypes.STRING, unique: true, allowNull: false}
-})
+
 
 const Rating = sequelize.define("rating", {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     rate: {type: DataTypes.INTEGER, allowNull: false}
+})
+
+const ProductInfo = sequelize.define('product_info', {
+    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+    title: {type: DataTypes.STRING, allowNull: false},
+    description: {type: DataTypes.STRING, allowNull: false},
 })
 
 
@@ -52,21 +55,21 @@ BasketProduct.belongsTo(Basket)
 Category.hasMany(Product)
 Product.belongsTo(Category)
 
-Tag.hasMany(Product)
-Product.belongsTo(Tag)
-
 Product.hasMany(Rating)
 Rating.belongsTo(Product)
 
 Product.hasMany(BasketProduct)
 BasketProduct.belongsTo(Product)
 
+Product.hasMany(ProductInfo, {as: 'info', foreignKey: 'productId'});
+ProductInfo.belongsTo(Product)
+
 module.exports = {
     User,
     Basket,
     BasketProduct,
     Product,
+    ProductInfo,
     Category,
-    Tag,
     Rating
 }
