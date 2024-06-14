@@ -17,7 +17,7 @@
   display: flex;
   flex-grow: 1;
   align-items: center;
-  gap: 30px;
+  gap: 60px;
 }
 
 .nav ul a {
@@ -33,6 +33,7 @@
 .tools {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .tools img {
