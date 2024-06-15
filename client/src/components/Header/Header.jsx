@@ -7,11 +7,11 @@ import cart from "../../assets/header/cart.svg";
 import BasicMenu from "../../UI/menu.jsx";
 import {SHOP_ROUTE, HOME_ROUTE, CONTACTS_ROUTE, CART_ROUTE} from "../../utils/consts.js";
 import {Context} from "../../main.jsx";
+import {observer} from "mobx-react-lite";
 
-export default function Header() {
+const Header = observer( ()=> {
 
-    const user = useContext(Context)
-    console.log(user)
+    const {user} = useContext(Context)
 
   return (
     <header className={style.header}>
@@ -43,11 +43,13 @@ export default function Header() {
 
         <BasicMenu/>
 
-          {user.isLogin && <Link to={CART_ROUTE}>
+          {user.isAuth && <Link to={CART_ROUTE}>
               <img src={cart} alt='cart' />
           </Link>}
 
       </div>
     </header>
   );
-}
+})
+
+export default  Header;

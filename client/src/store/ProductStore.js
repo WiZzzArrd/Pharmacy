@@ -7,7 +7,7 @@ export default class ProductStore {
             {id: 2, name: "Витамины и пищевые добавки"}
         ]
 
-        this._products = [
+        this._productsList = [
             {
                 id: 1,
                 name: "Троксактив",
@@ -35,6 +35,8 @@ export default class ProductStore {
             },
         ]
 
+        this._selectedCategory = {}
+
         makeAutoObservable(this)
     }
 
@@ -43,15 +45,23 @@ export default class ProductStore {
     }
 
     setProducts(products){
-        this._products = products
+        this._productsList = products
+    }
+
+    setSelectedCategory(category){
+        this._selectedCategory = category
     }
 
     get categories(){
         return this._categories
     }
 
-    get products(){
-        return this._products
+    get productsList(){
+        return this._productsList
+    }
+
+    get selectedCategory(){
+        return this._selectedCategory
     }
 
 }

@@ -1,0 +1,13 @@
+.shop{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 120px;
+}
+
+.products{
+    display: flex;
+    width: 70%;
+    gap: 40px;
+    flex-wrap: wrap;
+}

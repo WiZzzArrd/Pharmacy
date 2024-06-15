@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {Route, Routes, redirect} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import {authRoutes, publicRoutes} from "../routes.js";
 import {Context} from "../main.jsx";
 
@@ -8,7 +8,6 @@ const AppRouter = () => {
 
     const {user} = useContext(Context)
 
-    console.log(user)
 
     return (
         <Routes>
