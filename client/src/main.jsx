@@ -7,13 +7,15 @@ import "@fontsource/roboto/700.css";
 import {createContext} from "react";
 import UserStore from "./store/UserStore.js";
 import ProductStore from "./store/ProductStore.js";
+import BasketStore from "./store/BasketStore.js";
 
 export const Context = createContext(null)
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <Context.Provider value={{
         user: new UserStore(),
-        products: new ProductStore()
+        products: new ProductStore(),
+        basket: new BasketStore()
     }}>
     <App />
     </Context.Provider>

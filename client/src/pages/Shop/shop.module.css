@@ -8,6 +8,30 @@
 .products{
     display: flex;
     width: 70%;
+    justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
+    position: relative;
+    padding-bottom: 100px;
 }
+
+.paginate{
+    position: absolute;
+    bottom: 0;
+
+}
+
+.sort{
+    display: flex;
+    width: 92%;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+ .sort label{
+     margin-right: 15px;
+     opacity: 0.7;
+ }
+
+ .sort select{
+     width: 15%;
+ }

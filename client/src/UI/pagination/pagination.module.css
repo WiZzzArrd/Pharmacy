@@ -1,0 +1,34 @@
+.pagination{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nums{
+    display: flex;
+    gap: 10px;
+    font-size: 17px;
+}
+
+.nums span{
+    cursor: pointer;
+    transition: all .3s;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.arrow{
+    cursor: pointer;
+}
+
+.nums span:hover{
+
+    background-color: #d68048;
+    color: white;
+
+}
+
+.active{
+    background-color: #d68048;
+    color: white;
+}

@@ -39,7 +39,7 @@ class ProductController{
         let {categoryId, limit, page} = req.query
 
         page = page || 1
-        limit = limit || 9
+        limit = limit || 3
         let offset = page * limit - limit
         let products
 
@@ -56,7 +56,6 @@ class ProductController{
 
     async getOne(req, res){
         const {id} = req.params
-
 
 
         const product = await Product.findOne(

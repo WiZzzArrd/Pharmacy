@@ -3,20 +3,46 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import userIcon from "../assets/header/person.svg";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useContext} from "react";
 import {Context} from "../main.jsx";
+import {LOGIN_ROUTE} from "../utils/consts.js";
+import {observer} from "mobx-react-lite";
+import {set} from "mobx";
 
-export default function BasicMenu() {
+const  BasicMenu =  observer(()=> {
     const {user} = useContext(Context)
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
+
+    const navigate = useNavigate()
+
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
+
+
+    let handleClose
+
+    if(user.isAuth){
+        handleClose = ()=>{
+            if(window.confirm("Вы уверены, что хотите выйти из аккаунта?")){
+                setAnchorEl(null);
+                user.setUser({})
+                localStorage.removeItem("userId")
+                user.setIsAuth(false)
+                navigate(LOGIN_ROUTE)
+            }else{
+                setAnchorEl(null)
+            }
+
+        }
+    }else{
+        handleClose = ()=>{
+            setAnchorEl(null);
+            navigate(LOGIN_ROUTE)
+        }
+    }
 
     return (
         <div >
@@ -51,4 +77,6 @@ export default function BasicMenu() {
             </Menu>
         </div>
     );
-}
+})
+
+export default  BasicMenu

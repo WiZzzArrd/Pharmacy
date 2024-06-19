@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import style from "./header.module.css";
 import logo from "../../assets/header/logo.svg";
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import search from "../../assets/header/search.svg";
 import cart from "../../assets/header/cart.svg";
 import BasicMenu from "../../UI/menu.jsx";
@@ -12,6 +12,8 @@ import {observer} from "mobx-react-lite";
 const Header = observer( ()=> {
 
     const {user} = useContext(Context)
+
+
 
   return (
     <header className={style.header}>
