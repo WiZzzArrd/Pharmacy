@@ -25,7 +25,7 @@ const  App = observer( ()=> {
         }).finally(()=>{
             setIsLoading(false)
         }).catch((e)=>{
-            alert(e.response.data.message)
+            console.log(e.response.data.message)
         })
     }, [])
 

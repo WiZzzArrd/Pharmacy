@@ -10,7 +10,11 @@ class BasketStore {
     }
 
     setBasket(basket){
-        this._basket = basket
+        this._basket.push(basket)
+    }
+
+    setFilter(id){
+        this._basket = this._basket.filter((p)=>  p.id !== id)
     }
 
     get basket(){

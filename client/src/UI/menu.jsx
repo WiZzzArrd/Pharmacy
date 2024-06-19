@@ -31,6 +31,7 @@ const  BasicMenu =  observer(()=> {
                 user.setUser({})
                 localStorage.removeItem("userId")
                 user.setIsAuth(false)
+                localStorage.removeItem('token')
                 navigate(LOGIN_ROUTE)
             }else{
                 setAnchorEl(null)

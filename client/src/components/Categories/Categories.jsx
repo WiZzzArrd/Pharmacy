@@ -16,7 +16,6 @@ const Categories = observer(() => {
 
             products.setCategories(categories)
 
-            console.log(products)
         }
 
         fetchData()

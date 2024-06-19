@@ -46,13 +46,7 @@ const Shop = observer(() => {
 
     return (
         <section>
-            <div className={style.sort}>
-                <label htmlFor="">Сортировать по:</label>
-                <select name="" id="">
-                    <option value="">Названию</option>
-                    <option value="">Цене</option>
-                </select>
-            </div>
+
             <div className={style.shop}>
                 <Categories/>
                 <div className={style.products}>
